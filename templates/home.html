@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Income Prediction Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f8;
+        margin: 0;
+        padding: 0;
+      }
+
+      .page-wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 30px 20px;
+        min-height: 100vh;
+        overflow-y: auto;
+        box-sizing: border-box;
+      }
+
+      .form-container {
+        background-color: #fff;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input,
+      select {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 12px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="form-container">
+        <h1>Income Prediction</h1>
+        <form action="/predict" method="post">
+          <input type="number" name="age" placeholder="Age" required />
+          <input
+            type="text"
+            name="workclass"
+            placeholder="Workclass"
+            required
+          />
+          <input type="number" name="fnlwgt" placeholder="Fnlwgt" required />
+          <input
+            type="text"
+            name="education"
+            placeholder="Education"
+            required
+          />
+          <input
+            type="number"
+            name="education-num"
+            placeholder="Education Num"
+            required
+          />
+          <input
+            type="text"
+            name="marital-status"
+            placeholder="Marital Status"
+            required
+          />
+          <input
+            type="text"
+            name="occupation"
+            placeholder="Occupation"
+            required
+          />
+          <input
+            type="text"
+            name="relationship"
+            placeholder="Relationship"
+            required
+          />
+          <input type="text" name="race" placeholder="Race" required />
+          <input type="text" name="sex" placeholder="Sex" required />
+          <input
+            type="number"
+            name="capital-gain"
+            placeholder="Capital Gain"
+            required
+          />
+          <input
+            type="number"
+            name="capital-loss"
+            placeholder="Capital Loss"
+            required
+          />
+          <input
+            type="number"
+            name="hours-per-week"
+            placeholder="Hours per Week"
+            required
+          />
+          <input
+            type="text"
+            name="native-country"
+            placeholder="Native Country"
+            required
+          />
+          <button type="submit">Predict</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
